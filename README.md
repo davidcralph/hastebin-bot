@@ -15,3 +15,5 @@ Written in Node.js
 Add your token into the token section of the JS file, and then add commmands and stuff, then run the file in a node command prompt or something.
 
 Bot made by **ohlookitsderpy#3799**
+
+Pull requests done by other people O.o
