@@ -1,6 +1,8 @@
-const Discord = require("discord.js")
+const { Client } = require("discord.js")
 const hastebin = require('hastebin-gen');
-const bot = new Discord.Client()
+const bot = new Client({
+    disableEveryone: true // Bot won't say @everyone without pinging them ;)
+});
 const prefixes = {}
 const prefix = "hb!"
 var silenced = {}
@@ -25,7 +27,7 @@ bot.on("message", msg => {
     }
 
     if (cmd == "stats") {
-        msg.channel.send(`I am on **` + bot.guilds.size + `** servers with **` + bot.users.size + `** members in them.`)
+      msg.channel.send(`I am on **${bot.guilds.size}** with **${bot.users.size}** users!`)   
     }
 
     if (cmd == "invite") {
