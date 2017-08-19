@@ -1,11 +1,8 @@
 const Discord = require("discord.js")
 const client = new Discord.Client();
 const fs = require("fs");
-const bot = new Discord({
-  disableEveryone: true
-});
-
 const config = require("./config.json");
+
 client.on('ready', () => {
     console.log('beep boop')
     client.user.setGame("with Hastebin")
