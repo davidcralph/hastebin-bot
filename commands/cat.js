@@ -1,6 +1,5 @@
 var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
-exports.commandname = "cat";
-exports.description = "Get a picture of a cat";
+
 exports.run = (client, message, args) => {
 
     var xmlHttp = new XMLHttpRequest();
