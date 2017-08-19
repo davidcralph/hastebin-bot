@@ -12,7 +12,7 @@ Written in Node.js
 
 **How to use**
 
-Add your token into the token section of the JS file, and then add commmands and stuff, then run the file in a node command prompt or something.
+Add your token into the config.json fle, and then add commmands and stuff, then run the file in a node command prompt or something.
 
 Bot made by **ohlookitsderpy#3799**
 
