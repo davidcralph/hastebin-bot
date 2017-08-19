@@ -1,7 +1,7 @@
+const Discord = require("discord.js")
 const client = new Discord.Client();
 const fs = require("fs");
-const { Client } = require("discord.js")
-const bot = new Client({
+const bot = new Discord({
   disableEveryone: true
 });
 
