@@ -1,4 +1,12 @@
+const { RichEmbed } = require('discord.js');
 exports.run = (client, msg, args) => {
-    msg.channel.send("Here are my commands: ```help (shows this command), ping (tells you the ping), stats (tells you the stats, haste (posts data to hastebin, the last word you type will be the file format!), cat (requested by untocodes) and invite (gives you bot invite link)```") 
-
-}
+  const embed = new RichEmbed()
+     .setTitle(`Hastebin Bot`)
+     .addField('Commands:', '`help` `ping` `stats` `haste` `cat` `invite`')
+     .setTimestamp()
+     .setFooter(`Hastebin Bot; Made by ohlookitsderpy`)
+   msg.channel.send({
+       embed: {
+           disableEveryone: true
+       }});
+};
