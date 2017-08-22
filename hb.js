@@ -1,7 +1,10 @@
-const Discord = require("discord.js")
-const client = new Discord.Client();
+const { Client } = require("discord.js")
+const client = new Client({
+    disableEveryone: true
+});
 const fs = require("fs");
 const config = require("./config.json");
+const snekfetch = require('snekfetch');
 
 client.on('ready', () => {
     console.log('beep boop')
@@ -10,6 +13,13 @@ client.on('ready', () => {
 });
 client.on('guildCreate', (guild) => {
     guild.defaultChannel.send("Hello, I am Hastebin Bot and I post data to Hastebin. Do **hb!help** for my commands!")
+    snekfetch
+       .post(`https://discordbots.org/api/bots/${client.user.id}/stats`)
+       .set(`Authorization`, ) // Add a key ;)
+       .send({
+        server_count: client.guilds.size
+       })
+       .then(console.log(`[oliyBots] Posted O:`))
 });
 
 client.on("message", message => {
