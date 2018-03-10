@@ -1,0 +1,24 @@
+{
+  "name": "hastebin-bot",
+  "version": "0.1.0",
+  "description": "An opensource Discord bot that posts data to Hastebin",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "keywords": [
+    "Hastebin",
+    "Discord",
+    "Bot"
+  ],
+  "author": "ohlookitsderpy",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/ohlookitsderpy/hastebin-bot/issues/"
+  },
+  "homepage": "https://github.com/ohlookitsderpy/discord-polls/",
+  "dependencies": {
+    "discord.js": "11.1.0",
+    "snekfetch": "3.6.1"
+  }
+}
