@@ -8,7 +8,7 @@ Written in Node.js
 
 -Discord.js
 
--Hastebin-Gen
+-Snekfetch
 
 **How to use**
 
