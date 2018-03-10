@@ -6,7 +6,6 @@ exports.run = (client, msg, args) => {
      .addField("ping","Pong!")
      .addField("stats","Get the status of this bot.")
      .addField("haste","Upload text to Hastebin!")
-     .addField("invite","Invite me to your server.")
      .setTimestamp()
      .setFooter(`Hastebin Bot; Made by ohlookitsderpy`)
    msg.channel.send({
