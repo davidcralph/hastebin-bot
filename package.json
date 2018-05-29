@@ -13,9 +13,10 @@
   "bugs": {
     "url": "https://github.com/ohlookitsderpy/hastebin-bot/issues/"
   },
-  "homepage": "https://github.com/ohlookitsderpy/discord-polls/",
+  "homepage": "https://github.com/ohlookitsderpy/hastebin-bot/",
   "dependencies": {
-    "discord.js": "11.1.0",
-    "snekfetch": "3.6.1"
+    "discord.js": "11.3.2",
+    "snekfetch": "4.0.0",
+    "enmap": "2.5.2"
   }
 }
