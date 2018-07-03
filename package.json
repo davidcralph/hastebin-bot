@@ -3,20 +3,14 @@
   "version": "0.1.0",
   "description": "An opensource Discord bot that posts data to Hastebin",
   "main": "hb.js",
-  "keywords": [
-    "Hastebin",
-    "Discord",
-    "Bot"
-  ],
+  "keywords": [ "Hastebin", "Discord", "Bot" ],
   "author": "ohlookitsderpy",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/ohlookitsderpy/hastebin-bot/issues/"
-  },
+  "bugs": { "url": "https://github.com/ohlookitsderpy/hastebin-bot/issues/" },
   "homepage": "https://github.com/ohlookitsderpy/hastebin-bot/",
   "dependencies": {
     "discord.js": "11.3.2",
-    "snekfetch": "4.0.0",
-    "enmap": "2.5.2"
+    "snekfetch": "4.0.4",
+    "enmap": "2.6.3"
   }
 }
