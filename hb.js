@@ -11,15 +11,16 @@ const { Client } = require("discord.js")
 const Enmap = require("enmap");
 const client = new Client({ disableEveryone: true, autoReconnect: true });
 const config = require("./config.json");
+const log = require("umi-log");
 
 client.config = config;
 
 fs.readdir("./events/", (err, files) => {
-  if (err) return console.error(err);
+  if (err) return log.error(err);
   files.forEach(file => {
     const event = require(`./events/${file}`);
     let eventName = file.split(".")[0];
-    console.log(`loading ${eventName}`);
+    log.info(`Loading ${eventName}`);
     client.on(eventName, event.bind(null, client));
   });
 });
@@ -27,12 +28,12 @@ fs.readdir("./events/", (err, files) => {
 client.commands = new Enmap();
 
 fs.readdir("./commands/", (err, files) => {
-  if (err) return console.error(err);
+  if (err) return log.error(err);
   files.forEach(file => {
     if (!file.endsWith(".js")) return;
     let props = require(`./commands/${file}`);
     let commandName = file.split(".")[0];
-    console.log(`loading ${commandName}`);
+    log.info(`Loading ${commandName}`);
     client.commands.set(commandName, props);
   });
 });
