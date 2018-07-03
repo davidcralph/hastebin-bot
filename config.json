@@ -1,4 +1,5 @@
 {
-  "token":"Super Secret Token",
-  "prefix":"hb!"
+  "token": "Super Secret Token",
+  "prefix": "hb!",
+  "hasteurl": "https://hastebin.com"
 }
