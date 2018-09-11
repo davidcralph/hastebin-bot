@@ -13,9 +13,10 @@ const { Client } = require("discord.js"),
       log = require("umi-log");
 
 client.config = config;
+client.log = log;
 
 fs.readdir("./events/", (err, files) => {
-  if (err) return log.error(err);
+  if (err) return log.error('[Discord] ' + err);
   files.forEach(file => {
     const event = require(`./events/${file}`);
     let eventName = file.split(".")[0];
@@ -27,7 +28,7 @@ fs.readdir("./events/", (err, files) => {
 client.commands = new Discord.Collection();
 
 fs.readdir("./commands/", (err, files) => {
-  if (err) return log.error(err);
+  if (err) return log.error('[Discord] ' + err);
   files.forEach(file => {
     if (!file.endsWith(".js")) return;
     let props = require(`./commands/${file}`);
