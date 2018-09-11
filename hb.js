@@ -7,11 +7,10 @@
  |_|  |_|\__,_|___/\__\___|_.__/|_|_| |_| |____/ \___/ \__|
                                                           
 */                                                           
-const { Client } = require("discord.js")
-const Enmap = require("enmap");
-const client = new Client({ disableEveryone: true, autoReconnect: true });
-const config = require("./config.json");
-const log = require("umi-log");
+const { Client } = require("discord.js"),
+      client = new Client({ disableEveryone: true, autoReconnect: true }),
+      config = require("./config.json"),
+      log = require("umi-log");
 
 client.config = config;
 
@@ -20,12 +19,12 @@ fs.readdir("./events/", (err, files) => {
   files.forEach(file => {
     const event = require(`./events/${file}`);
     let eventName = file.split(".")[0];
-    log.info(`Loading ${eventName}`);
+    log.info(`[Discord] Loading ${eventName}`);
     client.on(eventName, event.bind(null, client));
   });
 });
 
-client.commands = new Enmap();
+client.commands = new Discord.Collection();
 
 fs.readdir("./commands/", (err, files) => {
   if (err) return log.error(err);
@@ -33,7 +32,7 @@ fs.readdir("./commands/", (err, files) => {
     if (!file.endsWith(".js")) return;
     let props = require(`./commands/${file}`);
     let commandName = file.split(".")[0];
-    log.info(`Loading ${commandName}`);
+    log.info(`[Discord] Loading ${commandName}`);
     client.commands.set(commandName, props);
   });
 });
