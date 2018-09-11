@@ -9,9 +9,8 @@
   "bugs": { "url": "https://github.com/ohlookitsderpy/hastebin-bot/issues/" },
   "homepage": "https://github.com/ohlookitsderpy/hastebin-bot/",
   "dependencies": {
-    "discord.js": "11.3.2",
-    "snekfetch": "4.0.4",
-    "enmap": "2.6.3",
-    "umi-log": "3.0.3"
+    "discord.js": "11.4.2",
+    "node-superfetch": "0.1.5",
+    "umi-log": "3.0.4"
   }
 }
