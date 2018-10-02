@@ -10,7 +10,7 @@
   "homepage": "https://github.com/ohlookitsderpy/hastebin-bot/",
   "dependencies": {
     "discord.js": "11.4.2",
-    "node-superfetch": "0.1.7",
+    "node-superfetch": "0.1.9",
     "umi-log": "3.0.4"
   }
 }
