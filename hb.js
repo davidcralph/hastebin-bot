@@ -5,15 +5,13 @@
  |  __  |/ _` / __| __/ _ \ '_ \| | '_ \  |  _ < / _ \| __|
  | |  | | (_| \__ \ ||  __/ |_) | | | | | | |_) | (_) | |_ 
  |_|  |_|\__,_|___/\__\___|_.__/|_|_| |_| |____/ \___/ \__|
-                                                          
+  Made by ohlookitsderpy, pull requests made by other people!
+  MIT License TM                                                        
 */                                                           
-const { Client } = require("discord.js"),
-      client = new Client({ disableEveryone: true, autoReconnect: true }),
-      config = require("./config.json"),
-      log = require("umi-log");
-
-client.config = config;
-client.log = log;
+const Discord = require("discord.js"),
+      client     = new Discord.Client({ disableEveryone: true, autoReconnect: true }),
+      config     = require("./config.json"),
+      log        = require("umi-log");
 
 fs.readdir("./events/", (err, files) => {
   if (err) return log.error('[Discord] ' + err);
@@ -26,6 +24,8 @@ fs.readdir("./events/", (err, files) => {
 });
 
 client.commands = new Discord.Collection();
+client.config = config;
+client.log = log;
 
 fs.readdir("./commands/", (err, files) => {
   if (err) return log.error('[Discord] ' + err);
