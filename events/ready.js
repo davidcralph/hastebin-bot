@@ -1,3 +1,3 @@
 module.exports = (client) => {
-   client.log.info("[Discord] beep boop");
+   console.log("beep boop");
 }
