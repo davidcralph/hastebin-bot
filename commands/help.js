@@ -1,7 +1,7 @@
-const { RichEmbed } = require('discord.js');
+const { MessageEmbed: embed } = require('discord.js');
 
 exports.run = (client, msg, args) => {
-  const embed = new RichEmbed()
+  const rEmbed = new embed()
      .setTitle("Commands:")
      .addField("help","This message.")
      .addField("ping","Pong!")
@@ -9,5 +9,5 @@ exports.run = (client, msg, args) => {
      .addField("haste","Upload text to Hastebin!")
      .setTimestamp()
      .setFooter(`Hastebin Bot | Made by ohlookitsderpy#1337`)
-   msg.channel.send(embed);
+   msg.channel.send(rEmbed);
 };
