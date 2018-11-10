@@ -1,9 +1,13 @@
 {
   "name": "hastebin-bot",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "An opensource Discord bot that posts data to Hastebin",
   "main": "hb.js",
-  "keywords": ["Hastebin", "Discord", "Bot"],
+  "keywords": [
+    "Hastebin", 
+    "Discord", 
+    "Bot"
+  ],
   "author": "ohlookitsderpy",
   "license": "MIT",
   "bugs": {
@@ -12,7 +16,6 @@
   "homepage": "https://github.com/ohlookitsderpy/hastebin-bot/",
   "dependencies": {
     "discord.js": "11.4.2",
-    "node-superfetch": "0.1.9",
-    "umi-log": "3.0.4"
+    "node-fetch": "2.2.1"
   }
 }
