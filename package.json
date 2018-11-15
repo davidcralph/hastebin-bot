@@ -15,7 +15,6 @@
   },
   "homepage": "https://github.com/ohlookitsderpy/hastebin-bot/",
   "dependencies": {
-    "discord.js": "github:discordjs/discord.js",
-    "node-fetch": "2.3.0"
+    "discord.js": "github:discordjs/discord.js"
   }
 }
