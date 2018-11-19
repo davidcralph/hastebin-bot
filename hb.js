@@ -8,13 +8,14 @@
   Made by ohlookitsderpy, pull requests made by other people!
   MIT License TM                                                        
 */                                                           
-const Discord = require("discord.js");
-const client  = new Discord.Client({ 
-  disableEveryone: true, 
-  autoReconnect: true 
+const { Client, Collection } = require("discord.js");
+const client = new Client({ 
+       disableEveryone: true, 
+       autoReconnect: true 
 });
+const { readdir } = require("fs");
 
-fs.readdir("./events/", (err, files) => {
+readdir("./events/", (err, files) => {
   if (err) return console.log(err);
   files.forEach(file => {
     const event = require(`./events/${file}`);
@@ -24,10 +25,10 @@ fs.readdir("./events/", (err, files) => {
   });
 });
 
-client.commands = new Discord.Collection();
+client.commands = new Collection();
 client.config = require("./config.json");
 
-fs.readdir("./commands/", (err, files) => {
+readdir("./commands/", (err, files) => {
   if (err) return console.log(err);
   files.forEach(file => {
     if (!file.endsWith(".js")) return;
