@@ -8,5 +8,5 @@ exports.run = (client, msg, args) => {
         headers: { 'Content-Type': 'application/json' } 
     })
       .then(res => res.json())
-      .then(json => { msg.channel.send(`:white_check_mark: Posted text to Hastebin at this URL: https://hastebin.com/${json.key}`); });
+      .then(json => { msg.channel.send(`:white_check_mark: Posted text to Hastebin at this URL: ${client.config.hasteurl}/${json.key}`); });
 }
