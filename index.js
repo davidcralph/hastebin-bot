@@ -18,7 +18,7 @@ readdir('./events/', (err, files) => {
   if (err) return console.log(err);
   files.forEach(file => {
     const event = require(`./events/${file}`);
-    let eventName = file.split(".")[0];
+    let eventName = file.split('.')[0];
     console.log(`Loading ${eventName}!`);
     client.on(eventName, event.bind(null, client));
   });
@@ -32,7 +32,7 @@ readdir('./commands/', (err, files) => {
   files.forEach(file => {
     if (!file.endsWith('.js')) return;
     let props = require(`./commands/${file}`);
-    let commandName = file.split(".")[0];
+    let commandName = file.split('.')[0];
     console.log(`Loading ${commandName}!`);
     client.commands.set(commandName, props);
   });
