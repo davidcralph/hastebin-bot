@@ -9,7 +9,7 @@
   MIT License                                                     
 */ 
 
-const { readdir }            = require('fs');
+const { readdir } = require('fs');
 const { Client, Collection } = require('discord.js');
 
 const client = new Client({ 
@@ -27,16 +27,15 @@ readdir('./events/', (err, files) => {
   });
 });
 
-client.config   = require('./config.json');
+client.config = require('./config.json');
 client.commands = new Collection();
 
 readdir('./commands/', (err, files) => {
   if (err) return console.log(err);
   files.forEach(file => {
-    let props = require(`./commands/${file}`);
     let commandName = file.split('.')[0];
     console.log(`Loading ${commandName}.js!`);
-    client.commands.set(commandName, props);
+    client.commands.set(commandName, require(`./commands/${file}`));
   });
 });
 
