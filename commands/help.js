@@ -6,7 +6,7 @@ exports.run = (client, msg, args) => {
     .addField('help', 'Returns this message.')
     .addField('ping', 'Pong! Returns the bot\'s ping.')
     .addField('stats', 'Get the bot stats.')
-    .addField('haste <text>', 'Upload text to Hastebin!')
+    .addField('haste <text>', 'Upload text to Hastebin.')
     .setFooter('Made by ohlookitsderpy | https://github.com/ohlookitsderpy/hastebin-bot');
   msg.channel.send(embed);
 };

@@ -6,11 +6,13 @@ exports.run = async (client, msg, args) => {
     const options = {
         method: 'POST',
         body: args.slice(0).join(' '), 
-        headers: { 'Content-Type': 'application/json' } 
+        headers: { 
+            'Content-Type': 'application/json' 
+        } 
     }
 
-    let res  = await fetch(`${client.config.hasteurl}/documents`, options);
-    let json = await res.json();
+    let res = await fetch(`${client.config.hasteurl}/documents`, options);
+    res = await res.json();
 
-    msg.channel.send(`:white_check_mark: | Posted text to Hastebin at this URL: ${client.config.hasteurl}/${json.key}`);
+    msg.channel.send(`:white_check_mark: | Posted text to Hastebin at this URL: ${client.config.hasteurl}/${res.key}`);
 }

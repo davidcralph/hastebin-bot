@@ -1,14 +1,3 @@
-/*
-  _    _           _       _     _         ____        _   
- | |  | |         | |     | |   (_)       |  _ \      | |  
- | |__| | __ _ ___| |_ ___| |__  _ _ __   | |_) | ___ | |_ 
- |  __  |/ _` / __| __/ _ \ '_ \| | '_ \  |  _ < / _ \| __|
- | |  | | (_| \__ \ ||  __/ |_) | | | | | | |_) | (_) | |_ 
- |_|  |_|\__,_|___/\__\___|_.__/|_|_| |_| |____/ \___/ \__|
-  Made by ohlookitsderpy, pull requests made by other people!
-  MIT License                                                     
-*/ 
-
 const { readdir } = require('fs');
 const { Client, Collection } = require('discord.js');
 
