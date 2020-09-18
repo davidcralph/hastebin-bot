@@ -1,6 +1,6 @@
 const { MessageEmbed } = require('discord.js');
 
-exports.run = (client, msg, args) => {
+exports.run = (_client, msg, _args) => {
   const embed = new MessageEmbed()
     .setTitle('Commands:')
     .addField('help', 'Returns this message.')

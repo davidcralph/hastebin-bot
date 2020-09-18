@@ -1,9 +1,9 @@
 const { readdir } = require('fs');
 const { Client, Collection } = require('discord.js');
 
-const client = new Client({ 
-  disableEveryone: true, 
-  autoReconnect: true 
+const client = new Client({
+  disableEveryone: true,
+  autoReconnect: true
 });
 
 readdir('./events/', (err, files) => {

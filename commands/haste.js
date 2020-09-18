@@ -5,14 +5,13 @@ exports.run = async (client, msg, args) => {
 
     const options = {
         method: 'POST',
-        body: args.slice(0).join(' '), 
-        headers: { 
-            'Content-Type': 'application/json' 
-        } 
+        body: args.slice(0).join(' '),
+        headers: {
+            'Content-Type': 'application/json'
+        }
     }
 
-    let res = await fetch(`${client.config.hasteurl}/documents`, options);
-    res = await res.json();
+    const res = await (await fetch(`${client.config.hasteurl}/documents`, options)).json();
 
     msg.channel.send(`:white_check_mark: | Posted text to Hastebin at this URL: ${client.config.hasteurl}/${res.key}`);
 }
