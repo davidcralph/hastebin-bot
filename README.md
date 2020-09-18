@@ -12,5 +12,8 @@ An opensource Discord bot that posts data to Hastebin.
 4. ``node index.js`` (or simply ``npm start``)
 5. Have fun!
 
+## Support
+Please open an issue or ask in my [Discord Server](https://discord.gg/HJmmmTB)
+
 ## License
 [MIT](LICENSE)
