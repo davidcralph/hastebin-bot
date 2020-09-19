@@ -1,1 +1,3 @@
-module.exports = () => console.log('Connected to Discord!');
+module.exports = () => {
+    console.log('Connected to Discord!');
+}
