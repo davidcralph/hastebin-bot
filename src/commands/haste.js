@@ -22,4 +22,4 @@ exports.run = async (client, msg, args) => {
     const res = await (await fetch(`${client.config.hasteurl}/documents`, options)).json();
 
     msg.channel.send(`:white_check_mark: | Posted text to Hastebin at this URL: ${client.config.hasteurl}/${res.key}`);
-}
+};
