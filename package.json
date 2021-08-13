@@ -18,6 +18,6 @@
         "url": "https://github.com/davidjcralph/hastebin-bot"
     },
     "dependencies": {
-        "discord.js": "12.5.1"
+        "discord.js": "13.1.0"
     }
 }
