@@ -1,5 +1,5 @@
 {
-  "token": "Discord Bot Token",
-  "prefix": "hb!",
-  "hasteurl": "https://hastebin.com"
+    "token": "Discord Bot Token",
+    "prefix": "hb!",
+    "hasteurl": "https://hastebin.com"
 }

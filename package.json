@@ -1,23 +1,23 @@
 {
-  "private": true,
-  "name": "hastebin-bot",
-  "version": "0.3.5",
-  "author": "David \"ohlookitsderpy\" Ralph",
-  "license": "MIT",
-  "description": "An opensource Discord bot that posts data to Hastebin",
-  "main": "index.js",
-  "scripts": {
-    "start": "node index.js"
-  },
-  "bugs": {
-    "url": "https://github.com/ohlookitsderpy/hastebin-bot/issues"
-  },
-  "homepage": "https://github.com/ohlookitsderpy/hastebin-bot",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ohlookitsderpy/hastebin-bot"
-  },
-  "dependencies": {
-    "discord.js": "12.5.1"
-  }
+    "private": true,
+    "name": "hastebin-bot",
+    "version": "0.3.5",
+    "author": "David Ralph",
+    "license": "MIT",
+    "description": "An opensource Discord bot that posts data to Hastebin",
+    "main": "index.js",
+    "scripts": {
+        "start": "cd src && node index.js"
+    },
+    "bugs": {
+        "url": "https://github.com/davidjcralph/hastebin-bot/issues"
+    },
+    "homepage": "https://github.com/davidjcralph/hastebin-bot",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/davidjcralph/hastebin-bot"
+    },
+    "dependencies": {
+        "discord.js": "12.5.1"
+    }
 }
