@@ -1,15 +1,13 @@
 const fetch = require('node-fetch');
+const fs = require('fs');
 
 exports.run = async (client, msg, args) => {
-    if (!args[0] && msg.attachments.size < 0) {
+    if (!args[0] || msg.attachments.size < 0) {
         return msg.channel.send(':x: | I can\'t post nothing to Hastebin!');
     }
 
-    let body = args.slice(0).join(' ');
-
-    if (msg.attachments.size > 0) {
-        body = await (await fetch(msg.attachments.first().url)).text();
-    }
+    let body = []; //Define body
+    client.config.dir_uploader ? body = fs.readFileSync(args[0], 'utf8') : body = args.slice(0).join(' '); //using ternary operator to check if dir_uploader is true or false.
 
     const options = {
         method: 'POST',
