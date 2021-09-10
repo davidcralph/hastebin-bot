@@ -1,5 +1,6 @@
 {
     "token": "Discord Bot Token",
     "prefix": "hb!",
-    "hasteurl": "https://hastebin.com"
+    "hasteurl": "https://hastebin.com",
+    "dir_uploader": true
 }
