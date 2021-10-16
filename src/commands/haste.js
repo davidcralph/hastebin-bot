@@ -9,7 +9,10 @@ exports.run = async (client, msg, args) => {
   // Define body
   let body = [];
   // using ternary operator to check if dir_uploader is true or false.
-  client.config.dir_uploader ? body = fs.readFileSync(args[0], 'utf8') : body = args.slice(0).join(' ');
+  client.config.dir_uploader ? body = (fs.existsSync(args[0]) ? fs.readFileSync(args[0], 'utf8') : null) : body = args.slice(0).join(' ');
+  if (body === null) { 
+    return msg.channel.send(':x: | File doesn\'t exist!');
+  }
 
   const options = {
     method: 'POST',
