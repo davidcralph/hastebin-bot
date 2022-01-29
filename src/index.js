@@ -2,6 +2,14 @@ const { readdir } = require('fs');
 const { Client, Collection } = require('discord.js');
 
 const client = new Client({
+  intents: [
+    'GUILDS',
+    'GUILD_INTEGRATIONS',
+    'GUILD_MESSAGES',
+    'GUILD_MESSAGE_TYPING',
+    'DIRECT_MESSAGES',
+    'DIRECT_MESSAGE_TYPING'
+  ],
   disableEveryone: true,
   autoReconnect: true
 });
